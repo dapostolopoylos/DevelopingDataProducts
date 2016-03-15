@@ -1,7 +1,7 @@
 # Set working directory.
 setwd("G:/Developing Data Products/CourseProject")
 
-# Load libraries.
+# Load libraries
 library(sqldf)
 library(RCurl)
 
