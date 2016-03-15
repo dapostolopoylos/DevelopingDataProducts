@@ -51,11 +51,7 @@ if (!exists("populationData")){
                                    NA_MALE + NA_FEMALE as 'TotalHawaian',
                                    H_MALE + H_FEMALE as 'TotalHispanic'
                               from 
-                                   populationData 
-                              where 
-                                   YEAR=7
-                                   AND
-                                   AGEGRP=0")
+                                   populationData")
 }
 
 
