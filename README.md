@@ -1,5 +1,5 @@
 # Developing Data Products
-This is the repo that contains all the code and data files that are relevant with the "Developing Data Products" course's final project.
+This is the repository that contains all the code and data sets that are relevant with the final project of the provided by JHU and Coursera **"Developing Data Products"** course.
 
 *	In the root folder there is the **"loadData.R"** script which is used for preparing the data needed for the Shiny application. 
 
