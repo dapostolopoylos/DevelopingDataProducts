@@ -1,7 +1,7 @@
 # Set working directory.
 setwd("G:/Developing Data Products/CourseProject")
 
-# Load libraries
+# Load libraries.
 library(sqldf)
 library(RCurl)
 
@@ -27,6 +27,7 @@ if(!file.exists("./data/CC-EST2014-ALLDATA.csv")){
   URL<-"https://www.census.gov/popest/data/counties/asrh/2014/files/CC-EST2014-ALLDATA.csv"
   x <- getURL(URL, ssl.verifypeer = FALSE)
   data <- read.csv(textConnection(x))
+  data <- sqldf("select * from data where YEAR=7 and AGEGRP=0")
   write.csv(data,"./data/CC-EST2014-ALLDATA.csv",row.names = FALSE)
   rm(x,URL,data)  
 }
