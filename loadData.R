@@ -127,7 +127,9 @@ sc <- rbind(sqldf("select distinct
                          StateName,
                          CountyName
                    from 
-                         finalDS 
+                         finalDS
+                   where 
+                         StateName is not null
                    order by 
                          StateName,
                          CountyName asc"),c("All","All"))
