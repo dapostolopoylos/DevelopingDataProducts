@@ -1,0 +1,53 @@
+Developing Data Products Course Project - (USA Population Analysis)
+========================================================
+author: Dimitrios Apostolopoulos
+date: March 16, 2016
+autosize: true
+transition: rotate
+transition-speed: slow
+
+About
+========================================================
+
+This is a presentation created by Dimitrios Apostolopoulos for the purposes of the project assignment for the "Developing Data Products" course, provided by [JHU](https://www.jhu.edu/) and [Coursera](https://www.coursera.org/), as part of the [Data Sciense Specialization](https://www.coursera.org/specializations/jhu-data-science).
+
+It is created with RStudio's Presenter and it accompanies the Shiny application [USA Population Analysis](https://dapostolopoylos.shinyapps.io/USAPopApp/).
+
+
+
+The Application
+========================================================
+
+In order to demonstrate the understanding of using [Shiny](http://shiny.rstudio.com/), an application called [USA Population Analysis](https://dapostolopoylos.shinyapps.io/USAPopApp/) has been developed.The purpose of this application is to present a population analysis for the USA according to data collected from various sources. The reference year for the data presented is 2014.
+
+The application analyses the USA population by state, county and gender and it also provides a population estimation by race. The data are visualized in a map by state and county and two pie charts that display the population by gender and the population estimates by race. The user has the ability to select a specific state and focus his analysis on that state, the application is fully responsive.
+
+
+
+Data
+=======================================================
+
+```{r loadRData, echo=FALSE}
+load(".RData")
+library(sqldf)
+
+```
+
+This is a sample of the data used in the application.
+
+```{r showData}
+head(sqldf("select State,CountyName as County,
+TotalPopulation as Population, TotalMale as Male,TotalFemale as Female 
+from finalDS"),8)
+```
+
+
+
+Links
+========================================================
+* Shiny Application - [USA Population Analysis](https://dapostolopoylos.shinyapps.io/USAPopApp/)
+* GitHub Repository - [Developing Data Products](https://github.com/dapostolopoylos/DevelopingDataProducts)
+* Data Sources
+     * [U.S. Census Bureau, Population Division](http://www.census.gov/popest/)
+     * [StateTable.com](http://statetable.com/)
+     * [MaxMind](http://dev.maxmind.com/)
